@@ -1,11 +1,103 @@
 body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+}
+
+.card__background {
     margin: 0;
     overflow: hidden;
-    animation: body 10s infinite;
+    animation: card 5s infinite;
   }
 
-@keyframes body {
-    0% {background-color: rgba(97, 158, 238, 0.3)}
-    50% {background-color: rgba(236, 238, 97, 0.3)}
-    100% {background-color: rgba(97, 158, 238, 0.3)}
+@keyframes card {
+    0% {background-color: rgba(240, 183, 233, 0.3)}
+    50% {background-color: rgba(235, 120, 206, 0.3)}
+    100% {background-color: rgba(240, 3, 134, 0.3)}
   }
+
+  .card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+    width: 800px; 
+    border: 1px solid #9933ff; 
+    margin: 10px;
+    box-shadow: 2px 2px 20px rgb(148, 39, 148);
+  }
+
+  .card__text {
+    font-family: 'Indie Flower', cursive;
+    font-size: 60px; 
+    color:  #9933ff;
+    text-shadow: 2px 2px 5px black;
+    margin: 150px;
+  }
+
+  .ballon {
+    position: absolute;
+    top:10%; 
+    right: 15%; 
+    width: 200px;
+    animation: ballon 3s infinite;
+    filter:drop-shadow(8px 8px 20px purple);
+  }
+  
+  
+  @keyframes ballon {
+    0% {transform: scale(1.0)}
+    25% {transform: scale(1.1)}
+    50% {transform: scale(1.2)}
+    75% {transform: scale(1.1)}
+    100% {transform: scale(1.0)}
+  }
+  
+  .party {
+    position: absolute;
+    top: 5%; 
+    left: 20%; 
+    margin-right: 200px;  
+    width: 100px;
+    filter:drop-shadow(8px 8px 10px purple);
+  }
+
+
+  .party {
+  width: 100px;
+  height: 100px;
+  position: normal;
+  animation-name: party;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+
+@keyframes party {
+  0%   {left:200px; top:0px;}
+  25%  {left:800px; top:300px;}
+  50%  {left:300px; top:300px;}
+  75%  {left:300px; top:300px;}
+  100% {left:800px; top:0px;}
+}
+
+
+.confetti {
+  position: absolute;
+  top: 40%; 
+  left: 20%; 
+  margin-right: 200px;  
+  width: 100px;
+  filter:drop-shadow(8px 8px 10px purple);
+  animation: confetti 2s infinite;
+}
+
+@keyframes confetti {
+  0% {transform: rotate(0)}
+  25% {transform: rotate(10deg)}
+  50% {transform: rotate(70deg)}
+  75% {transform: rotate(70deg)}
+  100% {transform: rotate(10deg)}
+} 
+
