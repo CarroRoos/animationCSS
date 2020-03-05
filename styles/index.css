@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    animation: body 10s infinite;
+  }
+
+@keyframes body {
+    0% {background-color: rgba(97, 158, 238, 0.3)}
+    50% {background-color: rgba(236, 238, 97, 0.3)}
+    100% {background-color: rgba(97, 158, 238, 0.3)}
+  }
